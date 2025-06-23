@@ -1,6 +1,14 @@
 const YEAR = new Date().getFullYear()
 
 export default {
+  navbar: {
+    extraContent: (
+      <>
+        <a href="/projects" style={{ marginLeft: '1rem' }}>Projects</a>
+        <a href="/resume" style={{ marginLeft: '1rem' }}>Resume</a>
+      </>
+    )
+  },
   footer: (
     <small style={{ display: 'block', marginTop: '8rem' }}>
       <time>{YEAR}</time> © Daniel Garza.
