@@ -6,6 +6,8 @@ export default {
       <>
         <a href="/projects" style={{ marginLeft: '1rem' }}>Projects</a>
         <a href="/resume" style={{ marginLeft: '1rem' }}>Resume</a>
+        <a href="/blog-jp" style={{ marginLeft: '1rem' }}>日本語ブログ</a>
+        <a href="/blog-zh" style={{ marginLeft: '1rem' }}>中文博客</a>
       </>
     )
   },
