@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "pages/**": {
+      "includeFiles": "pages/**/_meta.json"
+    }
+  }
+}
