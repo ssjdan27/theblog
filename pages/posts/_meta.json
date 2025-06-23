@@ -1,9 +1,6 @@
 {
-  "index": "About",
-  "blog-jp": "日本語ブログ",
-  "blog-zh": "中文博客",
-  "posts": "Posts",
-  "projects": "Projects",
-  "photos": "Photos",
-  "resume": "Resume"
+  "index": "Posts",
+  "markdown": "Markdown Examples",
+  "math": "Math Examples", 
+  "pages": "Pages Examples"
 }
