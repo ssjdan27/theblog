@@ -1,6 +1,36 @@
 const YEAR = new Date().getFullYear()
 
 export default {
+  navs: [
+    {
+      url: '/',
+      name: 'About'
+    },
+    {
+      url: '/projects',
+      name: 'Projects'
+    },
+    {
+      url: '/resume',
+      name: 'Resume'
+    },
+    {
+      url: '/blog-jp',
+      name: '日本語ブログ'
+    },
+    {
+      url: '/blog-zh',
+      name: '中文博客'
+    },
+    {
+      url: '/photos',
+      name: 'Photos'
+    },
+    {
+      url: '/posts',
+      name: 'Posts'
+    }
+  ],
   footer: (
     <small style={{ display: 'block', marginTop: '8rem' }}>
       <time>{YEAR}</time> © Daniel Garza.
