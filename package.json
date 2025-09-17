@@ -9,7 +9,7 @@
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "gray-matter": "^4.0.3",
-    "next": "^14.2.30",
+    "next": "^14.2.32",
     "nextra": "^2.13.2",
     "nextra-theme-blog": "^2.13.2",
     "react": "^18.2.0",
