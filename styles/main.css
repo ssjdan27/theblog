@@ -64,6 +64,8 @@ img.next-image {
   color: #69778c;
 }
 
+/* ...existing code... */
+
 @media screen and (max-width: 640px) {
   /* Keep the navbar on a single line and allow horizontal scrolling on small screens */
   .nx-mb-8.nx-flex.nx-items-center.nx-gap-3 > .nx-flex.nx-grow.nx-flex-wrap.nx-items-center.nx-justify-end.nx-gap-3 {
@@ -73,9 +75,34 @@ img.next-image {
     -webkit-overflow-scrolling: touch;
     gap: 0.75rem;
     padding-bottom: 0.25rem;
+    
+    /* Hide scrollbar but keep functionality */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .nx-mb-8.nx-flex.nx-items-center.nx-gap-3 > .nx-flex.nx-grow.nx-flex-wrap.nx-items-center.nx-justify-end.nx-gap-3::-webkit-scrollbar {
+    display: none;
   }
 
   .nx-mb-8.nx-flex.nx-items-center.nx-gap-3 > .nx-flex.nx-grow.nx-flex-wrap.nx-items-center.nx-justify-end.nx-gap-3 > * {
     white-space: nowrap;
+    flex-shrink: 0; /* Prevent items from shrinking */
+  }
+  
+  /* Add a subtle fade gradient on the right to indicate more content */
+  .nx-mb-8.nx-flex.nx-items-center.nx-gap-3 {
+    position: relative;
+  }
+  
+  .nx-mb-8.nx-flex.nx-items-center.nx-gap-3::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(to right, transparent, var(--nextra-bg) 80%);
+    pointer-events: none;
   }
 }
