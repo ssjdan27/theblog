@@ -63,3 +63,19 @@ img.next-image {
 .nav-line .nav-link {
   color: #69778c;
 }
+
+@media screen and (max-width: 640px) {
+  /* Keep the navbar on a single line and allow horizontal scrolling on small screens */
+  .nx-mb-8.nx-flex.nx-items-center.nx-gap-3 > .nx-flex.nx-grow.nx-flex-wrap.nx-items-center.nx-justify-end.nx-gap-3 {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.75rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .nx-mb-8.nx-flex.nx-items-center.nx-gap-3 > .nx-flex.nx-grow.nx-flex-wrap.nx-items-center.nx-justify-end.nx-gap-3 > * {
+    white-space: nowrap;
+  }
+}
