@@ -1,8 +1,15 @@
 import 'nextra-theme-blog/style.css'
 import Head from 'next/head'
 import { Analytics } from "@vercel/analytics/react"
+import { Noto_Sans_JP } from 'next/font/google'
 
 import '../styles/main.css'
+
+const notoSansJP = Noto_Sans_JP({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+})
 
 export default function Nextra({ Component, pageProps }) {
   return (
@@ -22,7 +29,9 @@ export default function Nextra({ Component, pageProps }) {
           crossOrigin="anonymous"
         />
       </Head>
-      <Component {...pageProps} />
+      <div className={notoSansJP.className}>
+        <Component {...pageProps} />
+      </div>
       <Analytics />
     </>
   )
