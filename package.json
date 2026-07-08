@@ -2,8 +2,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "next",
-    "build": "node ./scripts/gen-rss.js && next build",
+    "dev": "next dev --webpack",
+    "build": "node ./scripts/gen-rss.js && next build --webpack",
     "start": "next start"
   },
   "dependencies": {
