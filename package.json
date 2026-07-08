@@ -18,6 +18,9 @@
     "remark-math": "4.0.0",
     "rss": "^1.2.2"
   },
+  "resolutions": {
+    "next-mdx-remote": "^6.0.0"
+  },
   "prettier": {
     "arrowParens": "always",
     "singleQuote": true,
