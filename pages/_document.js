@@ -23,8 +23,8 @@ export default function Document() {
         <meta name="twitter:image" content={meta.image} />
         <link
           rel='stylesheet'
-          href='https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css'
-          integrity='sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB'
+          href='https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css'
+          integrity='sha384-u1zONI5gPXUx0UKI62c75/zww972y0v2rSK5ZYlVdS6xEuWDeZWUI66v6t1gvlXJ'
           crossorigin='anonymous'
         />
       </Head>
