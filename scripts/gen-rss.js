@@ -14,30 +14,32 @@ async function generate() {
     feed_url: `${SITE_URL}/feed.xml`
   })
 
-  const posts = (await fs.readdir(path.join(__dirname, '..', 'pages', 'posts')))
-    .filter((name) => /\.mdx?$/.test(name) && !name.startsWith('index.'))
+  const sections = ['posts', 'blog-jp', 'blog-zh']
   const allPosts = []
-  await Promise.all(
-    posts.map(async (name) => {
+  for (const section of sections) {
+    const directory = path.join(__dirname, '..', 'pages', section)
+    const posts = (await fs.readdir(directory))
+      .filter((name) => /\.mdx?$/.test(name) && !name.startsWith('index.'))
+    await Promise.all(posts.map(async (name) => {
       const content = await fs.readFile(
-        path.join(__dirname, '..', 'pages', 'posts', name)
+        path.join(directory, name)
       )
       const frontmatter = matter(content)
 
       allPosts.push({
         title: frontmatter.data.title,
-        url: `${SITE_URL}/posts/${name.replace(/\.mdx?$/, '')}`,
+        url: `${SITE_URL}/${section}/${name.replace(/\.mdx?$/, '')}`,
         date: frontmatter.data.date,
         description: frontmatter.data.description,
         categories: frontmatter.data.tag ? frontmatter.data.tag.split(', ') : [],
         author: frontmatter.data.author
       })
-    })
-  )
+    }))
+  }
 
   allPosts.sort((a, b) => new Date(b.date) - new Date(a.date))
   allPosts.forEach((post) => {
-      feed.item(post)
+    feed.item(post)
   })
   await fs.writeFile('./public/feed.xml', feed.xml({ indent: true }))
 }

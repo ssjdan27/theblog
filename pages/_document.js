@@ -5,8 +5,7 @@ export default function Document() {
     title: 'Daniel Garza | Software Developer',
     description:
       'The personal website of Daniel Garza, a software developer interested in cybersecurity, mathematics, and language learning.',
-    url: 'https://danielgarza.dev',
-    image: 'https://danielgarza.dev/images/photo.jpg'
+    url: 'https://danielgarza.dev'
   }
 
   return (
@@ -19,11 +18,9 @@ export default function Document() {
         <meta property="og:url" content={meta.url} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
-        <meta property="og:image" content={meta.image} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={meta.image} />
         <link
           rel='stylesheet'
           href='https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css'
