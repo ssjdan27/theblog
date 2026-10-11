@@ -40,7 +40,11 @@ Certificate in Data Analytics
 
 ### Undergraduate Data Science Researcher
 **The Data Mine - Purdue University** | *West Lafayette, IN* | *January 2026 - May 2026*
-- Collaborated with USSF HQ/S6 to build Resilient Cyber Defense Ecosystem for Space Systems
+- Built a modular Python inference prototype for USSF HQ/S6 research, integrating three dataset-specific models for spacecraft telemetry anomaly detection and network-attack classification across OPS-SAT-AD, STIN, and SCAD
+- Developed and evaluated Random Forest and XGBoost classifiers using pandas and scikit-learn, recording 96.6% test accuracy on 529 held-out OPS-SAT telemetry segments
+- Implemented streaming ingestion, buffering, time-window alignment, and a stacked logistic-regression meta-classifier to combine expert predictions into unified threat decisions during simulated streaming replay
+- Integrated fused prediction outputs with a Cloudflare Worker/R2 handoff, enabling the IDPS team to retrieve detection logs for Suricata ruleset updates
+- Standardized model artifacts, feature schemas, and label mappings; wrote automated tests covering model loading, streaming inference, fusion behavior, and the prediction-output transfer integration
 
 ### Student IT Business Analyst
 **University of Northern Colorado** | *Greeley, CO* | *March 2023 - May 2026*
