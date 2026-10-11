@@ -10,4 +10,12 @@ const withNextra = require('nextra')({
   },
 })
 
-module.exports = withNextra()
+module.exports = withNextra({
+  webpack(config, { dev }) {
+    // Nextra embeds the page map (nav titles) in every compiled page, but a
+    // cached page isn't recompiled when another page's front matter changes.
+    // Skip the persistent build cache so nav labels never go stale.
+    if (!dev) config.cache = false
+    return config
+  },
+})
