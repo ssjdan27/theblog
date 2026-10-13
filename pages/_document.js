@@ -21,9 +21,9 @@ export default function Document() {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
-        <link rel="icon" href="/favicon.ico" sizes="48x48" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon-v2.ico" type="image/x-icon" sizes="16x16 32x32 48x48" />
+        <link rel="icon" href="/favicon-v2.svg" type="image/svg+xml" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon-v2.png" sizes="180x180" />
         <link
           rel='stylesheet'
           href='https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css'
