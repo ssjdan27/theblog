@@ -1,0 +1,51 @@
+---
+type: post
+title: 404 · Page not found
+draft: true
+---
+
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+
+export const MissingPath = () => {
+  const { asPath, isReady } = useRouter()
+  if (!isReady || asPath === '/404') return null
+  return <>Nothing lives at <code>{asPath}</code>. </>
+}
+
+export const OpenEnso = () => (
+  <svg
+    viewBox="0 0 64 64"
+    width="168"
+    height="168"
+    role="img"
+    aria-label="An ensō circle left open, with a question mark inside"
+    style={{ display: 'block', margin: '2.5rem 0 2rem' }}
+  >
+    <circle
+      cx="32" cy="32" r="21" fill="none" stroke="currentColor"
+      strokeWidth="6" strokeLinecap="round" strokeDasharray="112 20"
+      transform="rotate(-60 32 32)"
+    />
+    <path
+      d="M26 26.5a6 6 0 1 1 8.5 5.5c-1.7.8-2.5 2-2.5 3.8V37"
+      fill="none" stroke="#D9412B" strokeWidth="4.5"
+      strokeLinecap="round" strokeLinejoin="round"
+    />
+    <circle cx="32" cy="44" r="2.6" fill="#D9412B" />
+  </svg>
+)
+
+<OpenEnso />
+
+<MissingPath />This page has gone 迷子 (*maigo*), the Japanese word for a lost child.
+
+The circle above is an enso (円相), a Zen brush circle that's often left open on purpose. The gap in this one is the page you were looking for. Here's the way back:
+
+- <Link href="/">About</Link>: who I am
+- <Link href="/posts">Posts</Link>: writing in English
+- <Link href="/projects">Projects</Link>: things I've built
+- <Link href="/resume">Resume</Link>: experience and skills
+- <Link href="/blog-jp">日本語ブログ</Link> · <Link href="/blog-zh">中文博客</Link>
+
+If a link on this site sent you here, I'd appreciate a heads-up on [GitHub](https://github.com/ssjdan27/theblog/issues).
