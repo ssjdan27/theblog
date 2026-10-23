@@ -4,8 +4,9 @@ export default function Document() {
   const meta = {
     title: 'Daniel Garza | Software Developer',
     description:
-      'The personal website of Daniel Garza, a software developer interested in cybersecurity, mathematics, and language learning.',
-    url: 'https://danielgarza.dev'
+      'The personal website of Daniel Garza, a software developer interested in software engineering, mathematics, and language learning.',
+    url: 'https://danielgarza.dev',
+    image: 'https://www.danielgarza.dev/images/og-card.png'
   }
 
   return (
@@ -18,9 +19,14 @@ export default function Document() {
         <meta property="og:url" content={meta.url} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:image" content={meta.image} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Daniel Garza, Software Developer" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.image} />
         <link rel="icon" href="/favicon-v2.ico" type="image/x-icon" sizes="16x16 32x32 48x48" />
         <link rel="icon" href="/favicon-v2.svg" type="image/svg+xml" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon-v2.png" sizes="180x180" />

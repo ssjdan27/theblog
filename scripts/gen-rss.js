@@ -9,7 +9,7 @@ async function generate() {
   const feed = new RSS({
     title: 'Daniel Garza',
     description:
-      'Writing from Daniel Garza about software development, mathematics, cybersecurity, and language learning.',
+      'Writing from Daniel Garza about software development, mathematics, and language learning.',
     site_url: SITE_URL,
     feed_url: `${SITE_URL}/feed.xml`
   })
